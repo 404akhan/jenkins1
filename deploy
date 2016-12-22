@@ -1,6 +1,6 @@
 -#!/bin/sh      
 ssh ubuntu@104.199.199.114 <<EOF        
- docker run -it --rm -p 81:5000 --name nodejs -v /home/ubuntu/Documents/app:/usr/src/app -w /usr/src/app node /bin/bash
+ docker run -it --rm -p 81:5000 --name nodejs -v /home/ubuntu/Documents/app/jenkins1:/usr/src/app -w /usr/src/app node /bin/bash
  cd /usr/src/app
  git pull       
  npm install --production       
