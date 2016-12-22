@@ -1,5 +1,5 @@
 -#!/bin/sh      
-ssh ssh ubuntu@104.199.199.114 <<EOF        
+ssh ubuntu@104.199.199.114 <<EOF        
  docker run -it --rm -p 81:5000 --name nodejs -v /home/ubuntu/Documents/app:/usr/src/app -w /usr/src/app node /bin/bash
  cd /usr/src/app
  git pull       
