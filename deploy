@@ -3,6 +3,6 @@ ssh ubuntu@104.199.199.114 <<EOF
  cd /home/ubuntu/Documents/app/jenkins1 
  git pull       
  npm install --production       
- forever restart all
+ pm2 restart all
  exit       
 EOF
