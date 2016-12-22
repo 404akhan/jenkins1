@@ -1,6 +1,8 @@
 -#!/bin/sh      
 ssh ubuntu@104.199.199.114 <<EOF        
- docker run -i --rm -p 81:5000 --name nodejs -v /home/ubuntu/Documents/app/jenkins1:/usr/src/app -w /usr/src/app node /bin/bash 'cd /usr/src/app && git pull && npm install --production && node index.js' || docker rm -f nodejs && docker run -i --rm -p 81:5000 --name nodejs -v /home/ubuntu/Documents/app/jenkins1:/usr/src/app -w /usr/src/app node /bin/bash 'cd /usr/src/app && git pull && npm install --production && node index.js'
-  
+ cd /home/ubuntu/Documents/app/jenkins1 
+ git pull       
+ npm install --production       
+ pm2 restart all
  exit       
 EOF
