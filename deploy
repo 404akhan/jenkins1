@@ -5,5 +5,6 @@ ssh ubuntu@104.199.199.114 <<EOF
  git pull       
  npm install --production       
  node index.js
+
  exit       
 EOF
